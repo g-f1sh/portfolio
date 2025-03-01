@@ -3,6 +3,7 @@ const repoName = "portfolio"; // Replace with your actual repository name
 
 const nextConfig = {
   output: 'export',
+  distDir: 'docs',
   basePath: isProduction ? `/${repoName}` : '',
   images: {
     unoptimized: true,
