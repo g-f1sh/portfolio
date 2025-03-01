@@ -8,6 +8,7 @@ const nextConfig = {
     unoptimized: true,
   },
   assetPrefix: isProduction ? `/${repoName}/` : '',
+  trailingSlash: true,
 };
 
 export default nextConfig;
