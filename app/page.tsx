@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Download } from "lucide-react"
+import { getBasePath } from "@/lib/path-utils"
 
 export default function Home() {
   return (
@@ -48,7 +49,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/resume.pdf" target="_blank">
+                <Link href={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/resume.pdf`} target="_blank">
                   <Download className="mr-2 h-4 w-4" /> Download Resume
                 </Link>
               </Button>
@@ -61,7 +62,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Image
-                  src="/placeholder.svg?height=600&width=600"
+                  src={getBasePath("/placeholder.svg?height=600&width=600")}
                   alt="Alex Johnson"
                   width={600}
                   height={600}
@@ -120,7 +121,7 @@ export default function Home() {
                 <Card key={index} className="overflow-hidden">
                   <div className="relative aspect-video">
                     <Image
-                      src={project.image || "/placeholder.svg"}
+                      src={getBasePath(project.image || "/placeholder.svg")}
                       alt={project.title}
                       fill
                       className="object-cover"
