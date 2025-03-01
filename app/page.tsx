@@ -121,7 +121,7 @@ export default function Home() {
                 <Card key={index} className="overflow-hidden">
                   <div className="relative aspect-video">
                     <Image
-                      src={getBasePath(project.image || "/placeholder.svg")}
+                      src={project.image}
                       alt={project.title}
                       fill
                       className="object-cover"
@@ -317,7 +317,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-featured online store with payment processing and inventory management.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: getBasePath("/placeholder.svg?height=400&width=600"),
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     demo: "https://example.com",
     github: "https://github.com",
@@ -325,7 +325,7 @@ const projects = [
   {
     title: "Task Management App",
     description: "A productivity app for teams to manage projects and track progress.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: getBasePath("/placeholder.svg?height=400&width=600"),
     technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     demo: "https://example.com",
     github: "https://github.com",
@@ -333,7 +333,7 @@ const projects = [
   {
     title: "Weather Dashboard",
     description: "Real-time weather forecasting with interactive maps and alerts.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: getBasePath("/placeholder.svg?height=400&width=600"),
     technologies: ["React", "Redux", "OpenWeather API", "Mapbox"],
     demo: "https://example.com",
     github: "https://github.com",
@@ -341,7 +341,7 @@ const projects = [
   {
     title: "Social Media Analytics",
     description: "Dashboard for tracking and analyzing social media performance metrics.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: getBasePath("/placeholder.svg?height=400&width=600"),
     technologies: ["Vue.js", "Express", "D3.js", "Firebase"],
     demo: "https://example.com",
     github: "https://github.com",
@@ -349,7 +349,7 @@ const projects = [
   {
     title: "Fitness Tracker",
     description: "Mobile app for tracking workouts, nutrition, and health goals.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: getBasePath("/placeholder.svg?height=400&width=600"),
     technologies: ["React Native", "GraphQL", "MongoDB", "AWS"],
     demo: "https://example.com",
     github: "https://github.com",
@@ -357,7 +357,7 @@ const projects = [
   {
     title: "Recipe Finder",
     description: "Web app that helps users find recipes based on available ingredients.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: getBasePath("/placeholder.svg?height=400&width=600"),
     technologies: ["Angular", "Node.js", "MySQL", "Spoonacular API"],
     demo: "https://example.com",
     github: "https://github.com",

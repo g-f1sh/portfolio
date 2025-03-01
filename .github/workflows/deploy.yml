@@ -28,12 +28,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
       
-      - name: Create .nojekyll file
-        run: touch public/.nojekyll
-        shell: bash
-        
       - name: Build Project
         run: npm run build
+        
+      - name: Prepare output directory
+        run: |
+          touch out/.nojekyll
+          cp public/404.html out/404.html
+          cp public/index.html out/index.html
+        shell: bash
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

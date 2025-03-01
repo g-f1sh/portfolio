@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && type nul > out\\.nojekyll && copy public\\404.html out\\404.html && copy public\\index.html out\\index.html",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
